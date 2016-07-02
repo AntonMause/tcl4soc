@@ -46,9 +46,11 @@ project_settings -hdl {VHDL} -auto_update_modelsim_ini 1 -auto_update_viewdraw_i
 # initialy link to source files, HDL and constraints
 create_links \
          -convert_EDN_to_HDL 0 \
+         -hdl_source {../vhdl/myChpOsc4.vhd} \
          -hdl_source {../vhdl/myDff.vhd} \
          -hdl_source {../vhdl/myDffCnt.vhd} \
          -hdl_source {../vhdl/myRngOsc.vhd} \
+         -hdl_source {../vhdl/OscChpCnt.vhd} \
          -hdl_source {../vhdl/OscRngCnt.vhd} 
 #
 create_links \
@@ -58,6 +60,9 @@ create_links \
 set_root -module {OscRngCnt::work} 
 
 organize_tool_files -tool {COMPILE} -input_type {constraint} -module {OscRngCnt::work} \
+	-file {./g4led.io.pdc}
+
+organize_tool_files -tool {COMPILE} -input_type {constraint} -module {OscChpCnt::work} \
 	-file {./g4led.io.pdc}
 
 save_project 

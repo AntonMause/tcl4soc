@@ -18,15 +18,15 @@ entity myRngOsc is
          o_clk : out std_logic );
 end entity myRngOsc;
 
-architecture rtl of myRngOsc is
 ----------------------------------------------------------------------
--- Component declarations
-component BUFD
+architecture rtl of myRngOsc is
+
+component BUFD -- BUF element with "do not remove" attribute
   port( A : in  std_logic;
         Y : out std_logic );
 end component;
 
-component NAND2
+component NAND2 -- 
   port( A, B : in  std_logic;
         Y : out std_logic );
 end component;

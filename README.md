@@ -67,6 +67,10 @@ OscRngCnt : Blink LEDs using ring oscillator.
 -myDff    : Simple D-FlipFlop (intended for use in myDffCnt)
 (Toplevel with smallest amount of resources, good to verify your own board)
 
+OscChpCnt : Blink LEDs using On chip oscillator.
+-myChpOsc : Use internal G4 25/50MHz RC-Osc
+(Next OnDie resource involved, go and check how it works)
+
 =======================================================================
 List of supported or todo kits, some SF2 Kits do IGLOO2 emulation.
 
@@ -74,3 +78,4 @@ List of supported or todo kits, some SF2 Kits do IGLOO2 emulation.
 -g4kick   0 (ToDo) M2S010S Avnet Kickstart Kit
 
 -Total    1 Configuration
+=======================================================================

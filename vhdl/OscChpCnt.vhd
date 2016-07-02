@@ -1,19 +1,19 @@
- 
+
 ----------------------------------------------------------------------
--- OscRngCnt
+-- OscChpCnt
 ----------------------------------------------------------------------
 -- (c) 2016 by Anton Mause
 --
--- Blink 8 LEDs based on as low resources as possible.
--- Only a hand full of LUTs for the delay line in the ring oscillator
--- plus a bunch of registers for the FlipFlip toggle counter.
+-- Blink 8 LEDs based only on OnChip resources.
+-- Use the 50 MHz OnDie RC-Oscillator plus a bunch 
+-- of registers for the FlipFlip toggle counter.
 --
 ----------------------------------------------------------------------
 library ieee;
 use ieee.std_logic_1164.all;
 
 ----------------------------------------------------------------------
-entity OscRngCnt is
+entity OscChpCnt is
   port( LED0     : out std_logic;
         LED1     : out std_logic;
         LED2     : out std_logic;
@@ -22,14 +22,13 @@ entity OscRngCnt is
         LED5     : out std_logic;
         LED6     : out std_logic;
         LED7     : out std_logic );
-end OscRngCnt;
+end OscChpCnt;
 
 ----------------------------------------------------------------------
-architecture rtl of OscRngCnt is
+architecture rtl of OscChpCnt is
 
-component myRngOsc is
-  generic (N : Integer);
-  port ( i_rst_n : IN std_logic;
+component myChpOsc is
+  port ( i_rst_n : in std_logic;
          o_clk : out std_logic );
 end component;
 
@@ -45,8 +44,7 @@ signal s_led : std_logic_vector(7 downto 0);
 
 begin
 
-myRngOsc_0 : myRngOsc
-  generic map( N => 100 )
+myChpOsc_0 : myChpOsc
   port map(
     i_rst_n => '1',
     o_clk   => s_clk );
