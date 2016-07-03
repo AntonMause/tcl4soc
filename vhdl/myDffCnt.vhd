@@ -10,6 +10,12 @@
 --
 -- WatchOut : Instantiation of myDff() passes arguments by index.
 -- This can lead to trouble when modifying parameters in component.
+--
+-- WatchOut : In reality the output signal timing is weak/unknown.
+-- The outputs of this entity will switch some time after i_clk.
+-- Every bit is its own clock domain, worst case for synchr designs.
+-- OK to toggle LEDs or to divide clock, unproper for compare/control.
+--
 ----------------------------------------------------------------------
 library ieee;
 use ieee.std_logic_1164.all;

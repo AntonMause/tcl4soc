@@ -71,6 +71,10 @@ OscChpCnt : Blink LEDs using On chip oscillator.
 -myChpOsc : Use internal G4 25/50MHz RC-Osc
 (Next OnDie resource involved, go and check how it works)
 
+OscChpMux : Blink LEDs using On chip oscillator and ngMUX.
+-myCccMux : Clock Conditioning Circuit with Non Glitching Mux.
+(Good chance to see how NGMUX works timingwise)
+
 =======================================================================
 List of supported or todo kits, some SF2 Kits do IGLOO2 emulation.
 
