@@ -51,7 +51,9 @@ create_links \
          -hdl_source {../vhdl/myChpOsc4.vhd} \
          -hdl_source {../vhdl/myDff.vhd} \
          -hdl_source {../vhdl/myDffCnt.vhd} \
+         -hdl_source {../vhdl/myPllOsc50m4.vhd} \
          -hdl_source {../vhdl/myRngOsc.vhd} \
+         -hdl_source {../vhdl/OscCccPll.vhd} \
          -hdl_source {../vhdl/OscChpCnt.vhd} \
          -hdl_source {../vhdl/OscChpGat.vhd} \
          -hdl_source {../vhdl/OscChpMux.vhd} \
@@ -73,6 +75,9 @@ organize_tool_files -tool {COMPILE} -input_type {constraint} -module {OscChpMux:
 	-file {./g4led.io.pdc}
 
 organize_tool_files -tool {COMPILE} -input_type {constraint} -module {OscChpGat::work} \
+	-file {./g4led.io.pdc}
+
+organize_tool_files -tool {COMPILE} -input_type {constraint} -module {OscCccPll::work} \
 	-file {./g4led.io.pdc}
 
 save_project 

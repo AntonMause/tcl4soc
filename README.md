@@ -79,6 +79,10 @@ OscChpGat : Blink LEDs using On chip oscillator and GCLKINT.
 -myCccGat : Clock Conditioning Circuit with Clock Gating block.
 (Good chance to see how GCLKINT works timingwise)
 
+OscCccPll : Blink LEDs using On chip oscillator and PLL.
+-myPllOsc50m : Use OnChip 1MHz Osc and PLL to create 50MHz.
+(Can be used to check if PLL power supply is of good quality)
+
 =======================================================================
 List of supported or todo kits, some SF2 Kits do IGLOO2 emulation.
 
