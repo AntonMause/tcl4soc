@@ -75,6 +75,10 @@ OscChpMux : Blink LEDs using On chip oscillator and ngMUX.
 -myCccMux : Clock Conditioning Circuit with Non Glitching Mux.
 (Good chance to see how NGMUX works timingwise)
 
+OscChpGat : Blink LEDs using On chip oscillator and GCLKINT.
+-myCccGat : Clock Conditioning Circuit with Clock Gating block.
+(Good chance to see how GCLKINT works timingwise)
+
 =======================================================================
 List of supported or todo kits, some SF2 Kits do IGLOO2 emulation.
 
