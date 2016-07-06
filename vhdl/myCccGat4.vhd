@@ -84,9 +84,9 @@ component CCC
 end component;
 
 component GCLKINT
-    port( A : in    std_logic := 'U';
+    port( A  : in    std_logic := 'U';
           EN : in    std_logic := 'U';
-          Y : out   std_logic );
+          Y  : out   std_logic );
 end component;
 
   signal gnd_net, vcc_net, GL0_net : std_logic;

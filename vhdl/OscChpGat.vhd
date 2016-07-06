@@ -33,6 +33,10 @@ end OscChpGat;
 ----------------------------------------------------------------------
 architecture rtl of OscChpGat is
 
+component brdLexSwx is
+  port ( o_lex,   o_pbx : out std_logic );
+end component;
+
 component myChpOsc is
   port ( i_rst_n : in std_logic;
          o_clk : out std_logic );
@@ -52,10 +56,15 @@ end component;
 signal s_clk, s_ccc, s_gat : std_logic;
 signal s_cnt : std_logic_vector(29 downto 0);
 signal s_led : std_logic_vector(7 downto 0);
-signal s_lex : std_logic := '1'; -- LED xor
+signal s_lex : std_logic;
 
 begin
 
+brdLexSwx_0 : brdLexSwx
+  port map(
+    o_lex   => s_lex,
+    o_pbx   => open );
+	
 myChpOsc_0 : myChpOsc
   port map(
     i_rst_n => '1',

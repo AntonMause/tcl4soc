@@ -49,8 +49,8 @@ Each project should contain most of the TopLevel code snippets.
 If your kits script does not support all features yet, check out the 
 code from the reference/template kits create scripts and source.
 
-Each kit comes with its own local brdRstClk file to fit and tweak.
-Also check PDC files for signal polarity and additional information.
+Each kit comes with its own local brdAbcXyz file to fit and tweak.
+Also check PDC files for signal routing and additional information.
 
 Signal naming convention i_ input, o_ output, s_ local, g_ global.
 
@@ -82,6 +82,8 @@ OscChpGat : Blink LEDs using On chip oscillator and GCLKINT.
 OscCccPll : Blink LEDs using On chip oscillator and PLL.
 -myPllOsc50m : Use OnChip 1MHz Osc and PLL to create 50MHz.
 (Can be used to check if PLL power supply is of good quality)
+
+brdLexSwx : Control signal polarity for each Board/Kit supported.
 
 =======================================================================
 List of supported or todo kits, some SF2 Kits do IGLOO2 emulation.

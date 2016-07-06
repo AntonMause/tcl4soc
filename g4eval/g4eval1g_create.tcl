@@ -46,6 +46,7 @@ project_settings -hdl {VHDL} -auto_update_modelsim_ini 1 -auto_update_viewdraw_i
 # initialy link to source files, HDL and constraints
 create_links \
          -convert_EDN_to_HDL 0 \
+         -hdl_source {./brdLexSwx.vhd} \
          -hdl_source {../vhdl/myCccGat4.vhd} \
          -hdl_source {../vhdl/myCccMux4.vhd} \
          -hdl_source {../vhdl/myChpOsc4.vhd} \
