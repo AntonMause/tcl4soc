@@ -2,7 +2,7 @@
 ----------------------------------------------------------------------
 -- OscCccPll
 ----------------------------------------------------------------------
--- 2016 by Jens Michaelsen
+-- (c) 2016 by Anton Mause
 --
 -- Blink 8 LEDs based only on OnChip resources.
 -- Use OnDie RC-Oscillator plus PLL and a bunch 
