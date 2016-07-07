@@ -33,10 +33,13 @@ end OscXtlCnt;
 ----------------------------------------------------------------------
 architecture rtl of OscXtlCnt is
 
+component brdLexSwx is
+  port ( o_lex,   o_pbx : out std_logic );
+end component;
+
 component brdRstClk
   port ( i_rst_n, i_clk : in std_logic;
-         o_rst_n, o_clk : out std_logic;
-         o_lex,   o_pbx : out std_logic );
+         o_rst_n, o_clk : out std_logic );
 end component;
 
 component myDffCnt
@@ -56,10 +59,13 @@ brdRstClk_0 : brdRstClk
     i_rst_n => DEVRST_N,
     i_clk   => OSC_CLK,
     o_rst_n => s_rst_n,
-    o_clk   => s_clk,
+    o_clk   => s_clk );
+
+brdLexSwx_0 : brdLexSwx
+  port map(
     o_lex   => s_lex,
     o_pbx   => s_pbx );
-
+	
 myDffCnt_0 : myDffCnt
   generic map( N => s_cnt'high+1 )
   port map(
@@ -80,3 +86,4 @@ myDffCnt_0 : myDffCnt
   UART_TXD <= UART_RXD; -- dummy
 
 end rtl;
+----------------------------------------------------------------------

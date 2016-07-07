@@ -2,7 +2,7 @@
 ----------------------------------------------------------------------
 -- myPllOsc50m
 ----------------------------------------------------------------------
--- (c) 2016 by Anton Mause
+-- (C) 2016 by Anton Mause
 --
 -- Instantiate 1 MHz OnChip RC Oscillator and use PLL to get 50 MHz
 --

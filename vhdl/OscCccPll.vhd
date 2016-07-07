@@ -1,4 +1,4 @@
-
+ 
 ----------------------------------------------------------------------
 -- OscCccPll
 ----------------------------------------------------------------------
@@ -25,7 +25,7 @@ entity OscCccPll is
 end OscCccPll;
 
 ----------------------------------------------------------------------
-architecture RTL of OscCccPll is
+architecture rtl of OscCccPll is
 
 component myPllOsc50m is
   port ( o_clk   : out std_logic;
@@ -38,15 +38,11 @@ component myDffCnt
          o_q : out std_logic_vector(N-1 downto 0) );
 end component;
 
-----------------------------------------------------------------------
--- Signal declarations
-----------------------------------------------------------------------
 signal s_clk, s_rst_n : std_logic;
 signal s_cnt : std_logic_vector(28 downto 0);
 signal s_led : std_logic_vector(7 downto 0);
 
 begin
-----------------------------------------------------------------------
 
 myPllOsc50m_0 : myPllOsc50m
   port map(
@@ -70,4 +66,5 @@ myDffCnt_0 : myDffCnt
   LED6   <= s_led(6);
   LED7   <= s_led(7);
 
-end RTL;
+end rtl;
+----------------------------------------------------------------------

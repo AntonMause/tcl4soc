@@ -49,7 +49,7 @@ Each project should contain most of the TopLevel code snippets.
 If your kits script does not support all features yet, check out the 
 code from the reference/template kits create scripts and source.
 
-Each kit comes with its own local brdRstClk file to fit and tweak.
+Each kit comes with its own local brdAbcXyz file to fit and tweak.
 Also check PDC files for signal polarity and additional information.
 
 Signal naming convention i_ input, o_ output, s_ local, g_ global.
@@ -89,6 +89,10 @@ OscXtlCnt : Blink LEDs using clock sourced by external crystal.
 (This is the most precise binky using a real xtal ;-)
 -brdRstClk : One file for each Board/Kit constellation.
 
+OscXtlTxd : Send characters via default (USB?)UART at 115200 baud.
+-mySerTxd : small UART transmitter fixed clock and baud rate
+(Can use bare metal txd unit for debug sessions, my little printk() )
+
 =======================================================================
 List of supported or todo kits, some SF2 Kits do IGLOO2 emulation.
 
@@ -96,4 +100,5 @@ List of supported or todo kits, some SF2 Kits do IGLOO2 emulation.
 -g4kick   0 (ToDo) M2S010S Avnet Kickstart Kit
 
 -Total    1 Configuration
+-Total    8 Toplevel projects
 =======================================================================
