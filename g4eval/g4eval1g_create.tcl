@@ -1,5 +1,6 @@
-# Microsemi Tcl Script
-# libero SoC
+#
+# Microsemi Tcl Script for libero SoC
+# (c) 2016 by Anton Mause 
 #
 # Microsemi Eval Kit for IGLOO2 M2GL010T-1FGG484 (2013)
 # Board populated with and used as IGLOO2 with Transceiver.
@@ -47,6 +48,7 @@ project_settings -hdl {VHDL} -auto_update_modelsim_ini 1 -auto_update_viewdraw_i
 create_links \
          -convert_EDN_to_HDL 0 \
          -hdl_source {./brdLexSwx.vhd} \
+         -hdl_source {./brdRstClk.vhd} \
          -hdl_source {../vhdl/myCccGat4.vhd} \
          -hdl_source {../vhdl/myCccMux4.vhd} \
          -hdl_source {../vhdl/myChpOsc4.vhd} \
@@ -58,10 +60,12 @@ create_links \
          -hdl_source {../vhdl/OscChpCnt.vhd} \
          -hdl_source {../vhdl/OscChpGat.vhd} \
          -hdl_source {../vhdl/OscChpMux.vhd} \
-         -hdl_source {../vhdl/OscRngCnt.vhd} 
+         -hdl_source {../vhdl/OscRngCnt.vhd} \
+         -hdl_source {../vhdl/OscXtlCnt.vhd} 
 #
 create_links \
          -convert_EDN_to_HDL 0 \
+         -io_pdc {./g4brd.io.pdc} \
          -io_pdc {./g4led.io.pdc}
 
 set_root -module {OscRngCnt::work} 
@@ -79,6 +83,10 @@ organize_tool_files -tool {COMPILE} -input_type {constraint} -module {OscChpGat:
 	-file {./g4led.io.pdc}
 
 organize_tool_files -tool {COMPILE} -input_type {constraint} -module {OscCccPll::work} \
+	-file {./g4led.io.pdc}
+
+organize_tool_files -tool {COMPILE} -input_type {constraint} -module {OscXtlCnt::work} \
+	-file {./g4brd.io.pdc} \
 	-file {./g4led.io.pdc}
 
 save_project 
