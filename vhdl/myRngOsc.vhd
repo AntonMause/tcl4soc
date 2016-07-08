@@ -2,7 +2,7 @@
 ----------------------------------------------------------------------
 -- myRngOsc
 ----------------------------------------------------------------------
--- (c) 2016 by Anton Mause
+-- (C) 2016 by Anton Mause
 --
 -- Generate chain of BUFD delay elements to create ring oscillator.
 -- !! This source is simplified for demonstration purpose !!

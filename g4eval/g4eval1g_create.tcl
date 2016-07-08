@@ -56,6 +56,7 @@ create_links \
          -hdl_source {../vhdl/myDffCnt.vhd} \
          -hdl_source {../vhdl/myPllOsc50m4.vhd} \
          -hdl_source {../vhdl/myRngOsc.vhd} \
+         -hdl_source {../vhdl/mySerRxd.vhd} \
          -hdl_source {../vhdl/mySerTxd.vhd} \
          -hdl_source {../vhdl/OscCccPll.vhd} \
          -hdl_source {../vhdl/OscChpCnt.vhd} \
@@ -63,6 +64,7 @@ create_links \
          -hdl_source {../vhdl/OscChpMux.vhd} \
          -hdl_source {../vhdl/OscRngCnt.vhd} \
          -hdl_source {../vhdl/OscXtlCnt.vhd} \
+         -hdl_source {../vhdl/OscXtlSer.vhd} \
          -hdl_source {../vhdl/OscXtlTxd.vhd} 
 #
 create_links \
@@ -88,6 +90,10 @@ organize_tool_files -tool {COMPILE} -input_type {constraint} -module {OscCccPll:
 	-file {./g4led.io.pdc}
 
 organize_tool_files -tool {COMPILE} -input_type {constraint} -module {OscXtlCnt::work} \
+	-file {./g4brd.io.pdc} \
+	-file {./g4led.io.pdc}
+
+organize_tool_files -tool {COMPILE} -input_type {constraint} -module {OscXtlSer::work} \
 	-file {./g4brd.io.pdc} \
 	-file {./g4led.io.pdc}
 
