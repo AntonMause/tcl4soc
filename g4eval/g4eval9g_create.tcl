@@ -2,16 +2,16 @@
 # Microsemi Tcl Script for libero SoC
 # (c) 2016 by Anton Mause 
 #
-# Microsemi Eval Kit for IGLOO2 M2GL010T-1FGG484 (2013)
-# Board populated with and used as IGLOO2 with Transceiver.
+# Microsemi Security Eval Kit for SmartFusion2 M2S009TS-1FGG484 (2014)
+# Board populated with SmartFusion2 but used as IGLOO2.
 #
-# tested with board Rev C silicon Rev 0
+# tested with board Rev D silicon Rev 3
 #
 
 # 
 set PATH_SOURCES   .
-set PATH_LINKED    ../../11p7/g4eval1g_lnk
-set PATH_IMPORTED  ../../11p7/g4eval1g_src
+set PATH_LINKED    ../../11p7/g4eval9g_lnk
+set PATH_IMPORTED  ../../11p7/g4eval9g_src
 
 # where are we
 puts -nonewline "Sources Path  : "
@@ -27,9 +27,9 @@ puts -nonewline "Current Path  : "
 puts [pwd]
 
 # create new project
-new_project -location $PATH_LINKED -name {g4eval1g_lnk} -project_description {G4 M2GL010 EvalKit} \
+new_project -location $PATH_LINKED -name {g4eval9g_lnk} -project_description {G4 M2S090TS EvalKit} \
 	-block_mode 0 -standalone_peripheral_initialization 0 -use_enhanced_constraint_flow 1 -hdl {VHDL} \
-	-family {IGLOO2} -die {M2GL010T} -package {484 FBGA} -speed {-1} -die_voltage {1.2} \
+	-family {IGLOO2} -die {M2GL090TS} -package {484 FBGA} -speed {-1} -die_voltage {1.2} \
 	-part_range {COM} -adv_options {DSW_VCCA_VOLTAGE_RAMP_RATE:100_MS} \
 	-adv_options {IO_DEFT_STD:LVCMOS 2.5V} -adv_options {PLL_SUPPLY:PLL_SUPPLY_25} \
 	-adv_options {RESTRICTPROBEPINS:1} -adv_options {RESTRICTSPIPINS:0} \
@@ -105,11 +105,11 @@ save_project
 # close_project -save 1 
 
 # save/make copy of project changing from "linked files" to "imported files"
-save_project_as -location $PATH_IMPORTED -name {g4eval1g_src} -replace_links 1 -files {all} -designer_views {all} 
+save_project_as -location $PATH_IMPORTED -name {g4eval9g_src} -replace_links 1 -files {all} -designer_views {all} 
 save_project 
 
 # copy project to ZIP archive
-project_archive -location $PATH_LINKED -name {g4eval1g_src} -replace_links 1 -files {all} -designer_views {all} 
+project_archive -location $PATH_LINKED -name {g4eval9g_src} -replace_links 1 -files {all} -designer_views {all} 
 save_project 
 
 # show current/process working directory

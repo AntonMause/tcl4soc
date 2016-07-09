@@ -93,16 +93,17 @@ OscXtlTxd : 8) Send characters via default (USB?)UART at 115200 baud.
 -mySerTxd : small UART transmitter fixed clock and baud rate
 (Can use bare metal txd unit for debug sessions, my little printk() )
 
+OscXtlSer : 9) Receive characters via default (USB?)UART at 115200 baud.
 -mySerRxd : small UART receiver fixed clock and baud rate
 (May use bare metal rxd/txd units for debug sessions)
 
 =======================================================================
 List of supported or todo kits, some SF2 Kits do IGLOO2 emulation.
 
--g4eval   1 (Done) M2GL010T Evaluation Kit
+-g4eval   6 (Done) M2GL010T, M2S025T, M2S090TS, Evaluation Kit
 -g4kick   0 (ToDo) M2S010S Avnet Kickstart Kit
 
--Total    1 Configuration
--Total    9 Toplevel projects
+-Total    6 Configuration
+-Total    8 Toplevel projects
 
 =======================================================================
