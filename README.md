@@ -83,17 +83,17 @@ OscCccPll : 5) Blink LEDs using On chip oscillator and PLL.
 -myPllOsc50m : Use OnChip 1MHz Osc and PLL to create 50MHz.
 (Can be used to check if PLL power supply is of good quality)
 
-brdLexSwx : 6) Control signal polarity for each Board/Kit supported.
+brdLexSwx :  Control signal polarity for each Board/Kit supported.
 
-OscXtlCnt : 7) Blink LEDs using clock sourced by external crystal.
+OscXtlCnt : 6) Blink LEDs using clock sourced by external crystal.
 (This is the most precise binky using a real xtal ;-)
 -brdRstClk : One file for each Board/Kit constellation.
 
-OscXtlTxd : 8) Send characters via default (USB?)UART at 115200 baud.
+OscXtlTxd : 7) Send characters via default (USB?)UART at 115200 baud.
 -mySerTxd : small UART transmitter fixed clock and baud rate
 (Can use bare metal txd unit for debug sessions, my little printk() )
 
-OscXtlSer : 9) Receive characters via default (USB?)UART at 115200 baud.
+OscXtlSer : 8) Receive characters via default (USB?)UART at 115200 baud.
 -mySerRxd : small UART receiver fixed clock and baud rate
 (May use bare metal rxd/txd units for debug sessions)
 
