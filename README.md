@@ -101,9 +101,9 @@ OscXtlSer : 8) Receive characters via default (USB?)UART at 115200 baud.
 List of supported or todo kits, some SF2 Kits do IGLOO2 emulation.
 
 -g4eval   6 (Done) M2GL010T, M2S025T, M2S090TS, Evaluation Kit
--g4kick   0 (ToDo) M2S010S Avnet Kickstart Kit
+-g4kick   1 (Done) M2S010S Avnet Kickstart Kit
 
--Total    6 Configuration
+-Total    7 Configuration
 -Total    8 Toplevel projects
 
 =======================================================================
