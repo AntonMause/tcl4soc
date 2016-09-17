@@ -104,8 +104,9 @@ List of supported or todo kits, some SF2 Kits do IGLOO2 emulation.
 -g4dev    2 (Done) M2S050T, Development kit (PoE, CAN, ...)
 -g4eval   6 (Done) M2GL010T, M2S025T, M2S090TS, Evaluation Kit
 -g4kick   2 (Done) M2S010S Avnet Kickstart Kit
+-g4rt     2 (Test) RTG4 Developmentkit (ES/PROTO)
 
--Total    8 Configuration
--Total   12 Toplevel projects
+-Total   14 Configurations
+-Total    8 Toplevel projects
 
 =======================================================================
