@@ -1,0 +1,21 @@
+#
+# Microsemi I/O Physical Design Constraints file 
+# (c) 2016 by Anton Mause 
+# 
+# User Locked I/O settings
+# FG896 footprint
+
+# original name : ?CLK? fixed  MHz XTL oscillator
+set_io OSC_CLK    -pinname  Z1     -fixed yes  -DIRECTION INPUT
+
+# USB uart original label : UART0_?XD, 
+set_io UART_RXD   -pinname  L23     -fixed yes  -DIRECTION INPUT
+set_io UART_TXD   -pinname  H27     -fixed yes  -DIRECTION OUTPUT
+
+# USB uart original label : UART1_?XD, 
+#set_io UART_RXD   -pinname  G29     -fixed yes  -DIRECTION INPUT
+#set_io UART_TXD   -pinname  H30     -fixed yes  -DIRECTION OUTPUT
+
+# original names : PB1=S2, ?? if pressed, PB2=dummy=GPIO??
+set_io PB1        -pinname  F30    -fixed yes  -DIRECTION INPUT
+set_io PB2        -pinname  V7     -fixed yes  -DIRECTION INPUT

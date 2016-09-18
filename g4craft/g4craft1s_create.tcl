@@ -27,7 +27,7 @@ puts -nonewline "Current Path  : "
 puts [pwd]
 
 # create new project
-new_project -location $PATH_LINKED -name {g4craft1s_lnk} -project_description {G4 M2S010 Emcraft SoC Kit} \
+new_project -location $PATH_LINKED -name {g4craft1s_lnk} -project_description {G4 M2S010 Emcraft SoM Kit} \
 	-block_mode 0 -standalone_peripheral_initialization 0 -use_enhanced_constraint_flow 1 -hdl {VHDL} \
 	-family {SmartFusion2} -die {M2S010} -package {484 FBGA} -speed {STD} -die_voltage {1.2} \
 	-part_range {COM} -adv_options {DSW_VCCA_VOLTAGE_RAMP_RATE:100_MS} \

@@ -2,7 +2,7 @@
 # Microsemi Tcl Script for libero SoC
 # (c) 2016 by Anton Mause 
 #
-# Emcraft SoM Kit for Microsemi M2S025-FGG484 (2014)
+# Emcraft SoM Kit for Microsemi M2S090-FGG484 (2014)
 # Board populated with and used as SmartFusion2.
 #
 # untested
@@ -10,8 +10,8 @@
 
 # 
 set PATH_SOURCES   .
-set PATH_LINKED    ../../11p7/g4craft2s_lnk
-set PATH_IMPORTED  ../../11p7/g4craft2s_src
+set PATH_LINKED    ../../11p7/g4craft9s_lnk
+set PATH_IMPORTED  ../../11p7/g4craft9s_src
 
 # where are we
 puts -nonewline "Sources Path  : "
@@ -27,9 +27,9 @@ puts -nonewline "Current Path  : "
 puts [pwd]
 
 # create new project
-new_project -location $PATH_LINKED -name {g4craft2s_lnk} -project_description {G4 M2S025 Emcraft SoM Kit} \
+new_project -location $PATH_LINKED -name {g4craft9s_lnk} -project_description {G4 M2S090 Emcraft SoM Kit} \
 	-block_mode 0 -standalone_peripheral_initialization 0 -use_enhanced_constraint_flow 1 -hdl {VHDL} \
-	-family {SmartFusion2} -die {M2S025} -package {484 FBGA} -speed {STD} -die_voltage {1.2} \
+	-family {SmartFusion2} -die {M2S090} -package {484 FBGA} -speed {STD} -die_voltage {1.2} \
 	-part_range {COM} -adv_options {DSW_VCCA_VOLTAGE_RAMP_RATE:100_MS} \
 	-adv_options {IO_DEFT_STD:LVCMOS 2.5V} -adv_options {PLL_SUPPLY:PLL_SUPPLY_25} \
 	-adv_options {RESTRICTPROBEPINS:1} -adv_options {RESTRICTSPIPINS:0} \
@@ -109,11 +109,11 @@ save_project
 # close_project -save 1 
 
 # save/make copy of project changing from "linked files" to "imported files"
-save_project_as -location $PATH_IMPORTED -name {g4craft2s_src} -replace_links 1 -files {all} -designer_views {all} 
+save_project_as -location $PATH_IMPORTED -name {g4craft9s_src} -replace_links 1 -files {all} -designer_views {all} 
 save_project 
 
 # copy project to ZIP archive
-project_archive -location $PATH_LINKED -name {g4craft2s_src} -replace_links 1 -files {all} -designer_views {all} 
+project_archive -location $PATH_LINKED -name {g4craft9s_src} -replace_links 1 -files {all} -designer_views {all} 
 save_project 
 
 # show current/process working directory

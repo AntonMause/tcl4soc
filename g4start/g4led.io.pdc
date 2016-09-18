@@ -1,0 +1,19 @@
+#
+# Microsemi I/O Physical Design Constraints file 
+# (c) 2016 by Anton Mause 
+# 
+# User Locked I/O settings
+# FG896 footprint
+
+# 2 real gree LEDs, ??=active, 6 dummy ports
+# LED0=DS3=GPIO_1=GPIO_80,  LED1=DS4=GPIO_2
+set_io LED0       -pinname  G30   -fixed yes
+set_io LED1       -pinname  AC1   -fixed yes
+set_io LED2       -pinname  AA2   -fixed yes
+set_io LED3       -pinname  AD3   -fixed yes
+set_io LED4       -pinname  AD2   -fixed yes
+set_io LED5       -pinname  AD1   -fixed yes
+set_io LED6       -pinname  AB2   -fixed yes
+set_io LED7       -pinname  AC4   -fixed yes
+
+#BaseBoard labels : GPIO_80, 88, 89, 87, 86, 85, 91, 83
