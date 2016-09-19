@@ -1,16 +1,17 @@
 
-tcl4soc : TCL / VHDL Playground for Microsemi Libero SOC
-=======================================AntonMause=2016==
+# tcl4soc by AntonMause 2016
+##TCL / VHDL Playground for Microsemi Libero SOC
 
 This is a pool of sources and scripts to demonstrate basic use of Libero SoC 
 toolsuite and devices of the generation G4(65nm) product family.
 
-G4 := SmartFusion2/IGLOO2/RTG4
+#### G4 := SmartFusion2/IGLOO2/RTG4
 
 The current snapshot is intended to use Libero SoC version 11.7 (2016q2)
 
 Unpack ./tcl4soc-RevXYZ.zip to your projects directory and name ./tcl4soc/ .
 Most generic HDL sources can be found in the "./vhdl/" folder.
+
 Also you find several g4-NameOfKit folders, one per supported board/kit group.
 The g4eval folder for the Microsemi Eval kit is intended as ref/template.
 
@@ -24,7 +25,7 @@ The RT4G/RTG4 naming is g4rt15es (engineering sample) and g4rt15pr (proto).
 PDC files follow the g4-FunctionalGroup.io.pdc rule.
 The minimun feature set requires 8 LED output names in "g4led.io.pdc" .
 Use more board features like Osc, Reset, Uart, Sw, ... with "g4brd.io.pdc" .
-By default all scripts support the enhanced constraint flow.
+By default all scripts support/require the enhanced constraint flow.
 
 The script will create the directories "../LiberoVersion/g4-NameOfKit-Mode/".
 Mode is "..._lnk" for a project using links to the sources in the pool.
@@ -57,58 +58,65 @@ Signal naming convention i_ input, o_ output, s_ local, g_ global.
 See "..._create.tcl" for more details.
 
 !! The examples provided are not intended for real world application !!
+
 !! Take a close look at the code, it may even describe why it is bad !!
 
-=======================================================================
 
-OscRngCnt : 1) Blink LEDs using ring oscillator.
+## List of toplevel projects :
+
+1. OscRngCnt : Blink LEDs using ring oscillator.
 -myRngOsc : Chain of delay elements to build ring oscillator
 -myDffCnt : Chain of D-FlipFlops to build counter/clock divider
 -myDff    : Simple D-FlipFlop (intended for use in myDffCnt)
 (Toplevel with smallest amount of resources, good to verify your own board)
 
-OscChpCnt : 2) Blink LEDs using On chip oscillator.
+1. OscChpCnt : Blink LEDs using On chip oscillator.
 -myChpOsc : Use internal G4 25/50MHz RC-Osc
 (Next OnDie resource involved, go and check how it works)
 
-OscChpMux : 3) Blink LEDs using On chip oscillator and ngMUX.
+1. OscChpMux : Blink LEDs using On chip oscillator and ngMUX.
 -myCccMux : Clock Conditioning Circuit with Non Glitching Mux.
 (Good chance to see how NGMUX works timingwise)
 
-OscChpGat : 4) Blink LEDs using On chip oscillator and GCLKINT.
+1. OscChpGat : Blink LEDs using On chip oscillator and GCLKINT.
 -myCccGat : Clock Conditioning Circuit with Clock Gating block.
 (Good chance to see how GCLKINT works timingwise)
 
-OscCccPll : 5) Blink LEDs using On chip oscillator and PLL.
+1. OscCccPll : Blink LEDs using On chip oscillator and PLL.
 -myPllOsc50m : Use OnChip 1MHz Osc and PLL to create 50MHz.
 (Can be used to check if PLL power supply is of good quality)
-
 brdLexSwx :  Control signal polarity for each Board/Kit supported.
 
-OscXtlCnt : 6) Blink LEDs using clock sourced by external crystal.
+1. OscXtlCnt : Blink LEDs using clock sourced by external crystal.
 (This is the most precise binky using a real xtal ;-)
 -brdRstClk : One file for each Board/Kit constellation.
 
-OscXtlTxd : 7) Send characters via default (USB?)UART at 115200 baud.
+1. OscXtlTxd : Send characters via default (USB?)UART at 115200 baud.
 -mySerTxd : small UART transmitter fixed clock and baud rate
 (Can use bare metal txd unit for debug sessions, my little printk() )
 
-OscXtlSer : 8) Receive characters via default (USB?)UART at 115200 baud.
+1. OscXtlSer : Receive characters via default (USB?)UART at 115200 baud.
 -mySerRxd : small UART receiver fixed clock and baud rate
 (May use bare metal rxd/txd units for debug sessions)
 
-=======================================================================
-List of supported or todo kits, some SF2 Kits do IGLOO2 emulation.
+## List of supported kits, some SF2 Kits do IGLOO2 emulation.
 
--g4adv    2 (Test) M2S150TS Advanced Development Board
--g4craft  5 (Test) M2S010, M2S... EmCraft SoM FG484
--g4dev    2 (Done) M2S050T, Development kit (PoE, CAN, ...)
--g4eval   6 (Done) M2GL010T, M2S025T, M2S090TS, Evaluation Kit
--g4kick   2 (Done) M2S010S Avnet Kickstart Kit
--g4rt     2 (Test) RTG4 Developmentkit (ES/PROTO)
--g4start  2 (Test) M2S050ES, EmCraft Starter Kit FG896
+1. g4adv (Test/2) M2S150TS Advanced Development Board
 
--Total   21 Configurations
--Total    8 Toplevel projects
+1. g4craft (Test/5) M2S010, M2S... EmCraft SoM FG484
+
+1. g4dev (Done/2) M2S050T, Development Kit (PoE, CAN, ...)
+
+1. g4eval (Done/6) M2GL010T, M2S025T, M2S090TS, Evaluation Kit
+
+1. g4kick (Done/2) M2S010S Avnet Kickstart Kit
+
+1. g4rt (Test/2) RTG4 Development Kit (ES/PROTO)
+
+1. g4start (Test/2) M2S050ES, EmCraft Starter Kit FG896
+
+#### Total of 21 Configurations
+
+#### Total of 8 Toplevel projects
 
 =======================================================================
