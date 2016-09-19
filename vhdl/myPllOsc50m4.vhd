@@ -1,14 +1,17 @@
 
 ----------------------------------------------------------------------
--- myPllOsc50m
+-- myPllOsc50m (myPllOsc50m4.vhd)
 ----------------------------------------------------------------------
 -- (C) 2016 by Anton Mause
 --
--- Instantiate 1 MHz OnChip RC Oscillator and use PLL to get 50 MHz
+-- Instantiate G4 1 MHz OnChip RC Oscillator and use PLL to get 50 MHz
 --
 -- !!Watch Out!! Think twice where the OnChip Oscillator can be used.
 -- The datasheet allows it to be up to 6% off, beside having 1% typ.
 -- In real world you face silicon, power and temperature variations.
+--
+-- See below for PLL lock (wide/default/narrow), can be used to 
+-- verify quality of power supply and pcb layout.
 --
 ----------------------------------------------------------------------
 library IEEE;

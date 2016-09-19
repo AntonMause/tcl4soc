@@ -5,8 +5,9 @@
 -- (c) 2016 by Anton Mause
 --
 -- Blink 8 LEDs using external Xtal Clock.
--- Use External Xtal, adjust its signal to 50 MHz and add a bunch 
--- of registers for the FlipFlip toggle counter.
+-- Use External Xtal, adjust its signal to some MHz and 
+-- add a bunch of registers for the FlipFlip toggle counter.
+-- See "brdConst_pkg.vhd" for specific BRD_OSC_CLK_MHZ values.
 --
 ----------------------------------------------------------------------
 library ieee;

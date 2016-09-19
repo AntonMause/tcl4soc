@@ -1,10 +1,10 @@
 
 ----------------------------------------------------------------------
--- myChpOsc
+-- myChpOsc (myChpOsc4.vhd)
 ----------------------------------------------------------------------
 -- (c) 2016 by Anton Mause
 --
--- Instantiate 50 MHz OnChip RC Oscillator
+-- Instantiate G4 50 MHz OnChip RC Oscillator
 -- 
 -- !!Watch Out!! Think twice where the OnChip Oscillator can be used.
 -- The datasheet allows it to be up to 7% off, beside having 1% typ.

@@ -4,14 +4,16 @@
 ----------------------------------------------------------------------
 -- (c) 2016 by Anton Mause
 --
--- Use External Xtal, adjust its signal to 50 MHz.
+-- Use External Xtal, adjust its signal to BRD_OSC_CLK_MHZ.
+-- See "brdConst_pkg.vhd" for specific BRD_OSC_CLK_MHZ values.
 -- Divide down to some Hz as stimulus pattern. 
 -- ->Send pattern via UART at 115200 or 921600 Baud
--- ->Use this to see which is the correct USB serial line.
+-- ->Use this to test which is the correct PC USB serial line.
 --
 ----------------------------------------------------------------------
 library ieee;
 use ieee.std_logic_1164.all;
+use work.brdConst_pkg.all;
 
 ----------------------------------------------------------------------
 entity OscXtlTxd is
@@ -62,7 +64,7 @@ end component;
 ----------------------------------------------------------------------
 constant c_baud : positive :=    115_200; -- default for most setups
 --constant c_baud : positive :=  921_600; -- maximum tested via USB
-constant c_freq : positive := 50_000_000;
+constant c_freq : positive := BRD_OSC_CLK_MHZ;
 signal s_clk, s_rst_n, s_lex, s_pbx : std_logic;
 signal s_cnt : std_logic_vector(28 downto 0);
 signal s_dat, s_led : std_logic_vector(7 downto 0);

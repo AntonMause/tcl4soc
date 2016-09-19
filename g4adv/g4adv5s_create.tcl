@@ -49,6 +49,7 @@ create_links \
          -convert_EDN_to_HDL 0 \
          -hdl_source {./brdLexSwx.vhd} \
          -hdl_source {./brdRstClk.vhd} \
+         -hdl_source {./brdConst_pkg.vhd} \
          -hdl_source {../vhdl/myCccGat4.vhd} \
          -hdl_source {../vhdl/myCccMux4.vhd} \
          -hdl_source {../vhdl/myChpOsc4.vhd} \

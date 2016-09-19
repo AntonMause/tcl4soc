@@ -1,10 +1,10 @@
 
 ----------------------------------------------------------------------
--- myCccMux
+-- myCccMux (myCccMux4.vhd)
 ----------------------------------------------------------------------
 -- (c) 2016 by Anton Mause
 --
--- Instantiate Clock Conditioning Circuit to use NonGlitching Mux
+-- Instantiate G4 Clock Conditioning Circuit to use NonGlitching Mux
 --
 ----------------------------------------------------------------------
 library IEEE;

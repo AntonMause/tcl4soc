@@ -1,10 +1,10 @@
 
 ----------------------------------------------------------------------
--- myCccGat
+-- myCccGat (myCccGat4.vhd)
 ----------------------------------------------------------------------
 -- (c) 2016 by Anton Mause
 --
--- Instantiate Clock Conditioning Circuit to use ClockGating
+-- Instantiate G4 Clock Conditioning Circuit to use ClockGating
 --
 ----------------------------------------------------------------------
 library IEEE;

@@ -4,7 +4,8 @@
 ----------------------------------------------------------------------
 -- (c) 2016 by Anton Mause
 --
--- Use External Xtal, adjust its signal to 50 MHz.
+-- Use External Xtal, adjust its signal to BRD_OSC_CLK_MHZ.
+-- See "brdConst_pkg.vhd" for specific BRD_OSC_CLK_MHZ values.
 -- Divide down to some Hz as stimulus pattern. 
 -- ->Send pattern via UART at 115200/921600 Baud
 -- ->Receive at same rate and output BYTE to 8 LEDs.
@@ -12,6 +13,7 @@
 ----------------------------------------------------------------------
 library ieee;
 use ieee.std_logic_1164.all;
+use work.brdConst_pkg.all;
 
 ----------------------------------------------------------------------
 entity OscXtlSer is
@@ -59,9 +61,7 @@ component mySerTxd
 end component;
 
 component mySerRxd is
-  generic ( 
-    baud   : positive :=     115_200;
-    freq   : positive :=  50_000_000);
+  generic ( baud, freq : positive );
   port ( 
     i_clk   : in std_logic;
     i_rst_n : in std_logic;
@@ -74,7 +74,7 @@ end component;
 ----------------------------------------------------------------------
 constant c_baud : positive :=    115_200; -- default for most setups
 --constant c_baud : positive :=  921_600; -- maximum tested via USB
-constant c_freq : positive := 50_000_000;
+constant c_freq : positive := BRD_OSC_CLK_MHZ;
 signal s_clk, s_rst_n, s_lex, s_pbx : std_logic;
 signal s_cnt : std_logic_vector(28 downto 0);
 signal s_dat, s_led : std_logic_vector(7 downto 0);

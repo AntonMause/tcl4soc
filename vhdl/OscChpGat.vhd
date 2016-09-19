@@ -5,7 +5,7 @@
 -- (c) 2016 by Anton Mause
 --
 -- Blink some LEDs based only on OnChip resources.
--- Use the 50 MHz OnDie RC-Oscillator plus a bunch 
+-- Use the OnDie RC-Oscillator plus a bunch 
 -- of registers for the FlipFlip toggle counter.
 --
 -- Added the CCC clock gating unit to demonstrate its behaivour.

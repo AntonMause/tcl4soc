@@ -5,7 +5,8 @@
 -- (c) 2016 by Anton Mause
 --
 -- Board dependend reset and clock manipulation file.
--- Adjust i_clk from some known input clock rate so o_clk runs at 50MHz.
+-- Adjust i_clk from some known clock, so o_clk has BRD_OSC_CLK_MHZ.
+-- See "brdConst_pkg.vhd" for specific BRD_OSC_CLK_MHZ values.
 -- Sync up o_rst_n to fit to rising edge of o_clk.
 --
 ----------------------------------------------------------------------
@@ -29,7 +30,7 @@ component SYSRESET
         POWER_ON_RESET_N : out std_logic );
   end component;
 
-  signal s_dly_n, s_rst_n : std_logic;
+  signal s_tgl, s_dly_n, s_rst_n : std_logic;
 
 begin
 
@@ -46,10 +47,12 @@ SYSRESET_0 : SYSRESET
     if (i_clk'event and i_clk = '1') then
       if s_rst_n = '0' then
         s_dly_n <= '0';
+        s_tgl   <= '0';
         o_rst_n <= '0';
       else
         s_dly_n <= '1';
-        o_rst_n <= s_dly_n;
+        s_tgl   <= not s_tgl;
+      o_rst_n <= s_dly_n;
       end if;
     end if;
   end process;
@@ -64,7 +67,9 @@ SYSRESET_0 : SYSRESET
 --    end if;
 --  end process;
 
-  o_clk   <= i_clk;
+-- edit BRD_OSC_CLK_MHZ in brdConst_pkg too
+  o_clk   <= i_clk; -- 50MHz, direct
+--o_clk   <= s_tgl; -- 25MHz, divided
 
 end rtl;
 ----------------------------------------------------------------------
