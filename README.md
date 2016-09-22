@@ -1,10 +1,14 @@
 
-# tcl4soc by AntonMause 2016
+# tcl4soc
+
+ 2016 by Anton Mause
+
 ##TCL / VHDL Playground for Microsemi Libero SOC
 
 This is a pool of sources and scripts to demonstrate basic use of Libero SoC 
-toolsuite and devices of the generation G4(65nm) product family.
+toolsuite and devices of the generation G3(130nm) & G4(65nm) product families.
 
+#### G3 = ProASIC3/IGLOO(1)/Fusion/SmartFusion(1)/RT3PE
 #### G4 := SmartFusion2/IGLOO2/RTG4
 
 The current snapshot is intended to use Libero SoC version 11.7 (2016q2)
@@ -99,7 +103,9 @@ brdLexSwx :  Control signal polarity for each Board/Kit supported.
 -mySerRxd : small UART receiver fixed clock and baud rate
 (May use bare metal rxd/txd units for debug sessions)
 
-## List of supported kits, some SF2 Kits do IGLOO2 emulation.
+## List of supported kits :
+
+1. g3scs (Test/5) ProAsic3/Igloo(1)/... M1/M7/... SCS/Dev Kits
 
 1. g4adv (Test/2) M2S150TS Advanced Development Board
 
@@ -115,8 +121,10 @@ brdLexSwx :  Control signal polarity for each Board/Kit supported.
 
 1. g4start (Test/2) M2S050ES, EmCraft Starter Kit FG896
 
-#### Total of 21 Configurations
+#### Total of 26 Configurations
 
 #### Total of 8 Toplevel projects
+
+B.t.w. : Some SF2 Kits support IGLOO2 emulation.
 
 =======================================================================

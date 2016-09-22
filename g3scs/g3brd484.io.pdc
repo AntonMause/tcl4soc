@@ -1,0 +1,23 @@
+#
+# Microsemi I/O Physical Design Constraints file 
+# (c) 2016 by Anton Mause 
+# 
+# User Locked I/O settings (484/256)
+# FGG484 footprint on SCS Kit
+#
+# original name : OSC_CLK fixed 48 MHz XTL oscillator (E4/B1)
+set_io OSC_CLK    -pinname  E4   -fixed yes  -DIRECTION INPUT
+
+# original name : PORESET_N = DS1834 & Rst for ARM (V7/R4)
+set_io DEVRST_N   -pinname  T19  -fixed yes  -DIRECTION INPUT
+
+# original name : BUF2_PBRST_N = SW1  (T9/N6)
+#set_io DEVRST_N  -pinname  T9   -fixed yes  -DIRECTION INPUT
+
+# USB uart label : RS232_?XD,  close JP11 & JP12 (D9/A6), (G9/D6)
+set_io UART_RXD   -pinname  F18  -fixed yes  -DIRECTION INPUT
+set_io UART_TXD   -pinname  G18  -fixed yes  -DIRECTION OUTPUT
+
+# original names : PB1=SW1, PB2=?, high if pressed
+set_io PB1        -pinname  T9   -fixed yes  -DIRECTION INPUT
+#set_io PB2        -pinname  ??   -fixed yes  -DIRECTION INPUT

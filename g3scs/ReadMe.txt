@@ -1,0 +1,10 @@
+
+SCS Kit for Microsemi 
+
+Device : L6 AGL600V2-FGG256
+       : M7 M7A3P1000-FGG484
+       : A1 M1A3P1000-FGG484
+       : L1 M1A3P1000L-FGG484
+       : G1 M1AGL1000V2-FGG484
+
+ToDo : test kits

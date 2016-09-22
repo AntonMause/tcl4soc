@@ -1,0 +1,18 @@
+#
+# Microsemi I/O Physical Design Constraints file 
+# (c) 2016 by Anton Mause 
+# 
+# User Locked I/O settings
+# FGG256 footprint on SCS Kit
+#
+set_io LED0       -pinname  B7   -fixed yes 
+set_io LED1       -pinname  C7   -fixed yes 
+set_io LED2       -pinname  P5   -fixed yes 
+set_io LED3       -pinname  T2   -fixed yes 
+set_io LED4       -pinname  P4   -fixed yes 
+set_io LED5       -pinname  R3   -fixed yes 
+set_io LED6       -pinname  P2   -fixed yes 
+set_io LED7       -pinname  P1   -fixed yes 
+
+# set_io LED8       -pinname  R1  -fixed yes
+# set_io LED9       -pinname  R2  -fixed yes
