@@ -1,0 +1,21 @@
+#
+# Microsemi I/O Physical Design Constraints file 
+# (c) 2016 by Anton Mause 
+# 
+# User Locked I/O settings
+# CS132 footprint on Icicle Kit
+#
+
+# original name : OSC_CLK approx 20 MHz RC variable oscillator
+set_io OSC_CLK   -pinname  A5   -fixed yes  -DIRECTION INPUT
+
+# original name : PBRESET_N = DS1818 & SW1 = low on power up & reset
+set_io DEVRST_N   -pinname  C1   -fixed yes  -DIRECTION INPUT
+
+# original names : PB1=SWITCH4, PB2=SWITCH5, low if pressed
+set_io PB1        -pinname  C9   -fixed yes  -DIRECTION INPUT
+set_io PB2        -pinname  A13  -fixed yes  -DIRECTION INPUT
+
+# USB uart original label : AGL_UART_?XD
+set_io UART_RXD   -pinname  C31  -fixed yes  -DIRECTION INPUT
+set_io UART_TXD   -pinname  B34  -fixed yes  -DIRECTION OUTPUT
