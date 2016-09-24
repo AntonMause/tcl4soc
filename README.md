@@ -103,6 +103,11 @@ brdLexSwx :  Control signal polarity for each Board/Kit supported.
 -mySerRxd : small UART receiver fixed clock and baud rate
 (May use bare metal rxd/txd units for debug sessions)
 
+1. IniSftDiv : Shift register based clock divider with No/aSync/Sync Reset.
+(Can be used to understand what is different here from SRAM FPGAs)
+
+1. IniPatGen : Pattern Generators with No/aSync Reset.
+
 ## List of supported kits :
 
 1. g3icicle (Done/1) AGL125V2 Icicle Kit
@@ -125,7 +130,7 @@ brdLexSwx :  Control signal polarity for each Board/Kit supported.
 
 #### Total of 27 Configurations
 
-#### Total of 8 Toplevel projects
+#### Total of 10 Toplevel projects
 
 B.t.w. : Some SF2 Kits support IGLOO2 emulation.
 

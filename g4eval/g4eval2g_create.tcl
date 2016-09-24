@@ -50,6 +50,8 @@ create_links \
          -hdl_source {./brdLexSwx.vhd} \
          -hdl_source {./brdRstClk.vhd} \
          -hdl_source {./brdConst_pkg.vhd} \
+         -hdl_source {../vhdl/IniPatGen.vhd} \
+         -hdl_source {../vhdl/IniSftDiv.vhd} \
          -hdl_source {../vhdl/myCccGat4.vhd} \
          -hdl_source {../vhdl/myCccMux4.vhd} \
          -hdl_source {../vhdl/myChpOsc4.vhd} \
@@ -59,6 +61,7 @@ create_links \
          -hdl_source {../vhdl/myRngOsc.vhd} \
          -hdl_source {../vhdl/mySerRxd.vhd} \
          -hdl_source {../vhdl/mySerTxd.vhd} \
+         -hdl_source {../vhdl/mySynRst.vhd} \
          -hdl_source {../vhdl/OscCccPll.vhd} \
          -hdl_source {../vhdl/OscChpCnt.vhd} \
          -hdl_source {../vhdl/OscChpGat.vhd} \
@@ -99,6 +102,14 @@ organize_tool_files -tool {COMPILE} -input_type {constraint} -module {OscXtlSer:
 	-file {./g4led.io.pdc}
 
 organize_tool_files -tool {COMPILE} -input_type {constraint} -module {OscXtlTxd::work} \
+	-file {./g4brd.io.pdc} \
+	-file {./g4led.io.pdc}
+
+organize_tool_files -tool {COMPILE} -input_type {constraint} -module {IniSftDiv::work} \
+	-file {./g4brd.io.pdc} \
+	-file {./g4led.io.pdc}
+
+organize_tool_files -tool {COMPILE} -input_type {constraint} -module {IniPatGen::work} \
 	-file {./g4brd.io.pdc} \
 	-file {./g4led.io.pdc}
 
