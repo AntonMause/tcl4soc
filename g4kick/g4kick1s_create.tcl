@@ -50,8 +50,8 @@ create_links \
          -hdl_source {./brdLexSwx.vhd} \
          -hdl_source {./brdRstClk.vhd} \
          -hdl_source {./brdConst_pkg.vhd} \
-         -hdl_source {../vhdl/IniPatGen.vhd} \
-         -hdl_source {../vhdl/IniSftDiv.vhd} \
+         -hdl_source {../vhdl/FsmPatGen.vhd} \
+         -hdl_source {../vhdl/FsmSftDiv.vhd} \
          -hdl_source {../vhdl/myCccGat4.vhd} \
          -hdl_source {../vhdl/myCccMux4.vhd} \
          -hdl_source {../vhdl/myChpOsc4.vhd} \
@@ -106,11 +106,11 @@ organize_tool_files -tool {COMPILE} -input_type {constraint} -module {OscXtlTxd:
 	-file {./g4brd.io.pdc} \
 	-file {./g4led.io.pdc}
 
-organize_tool_files -tool {COMPILE} -input_type {constraint} -module {IniSftDiv::work} \
+organize_tool_files -tool {COMPILE} -input_type {constraint} -module {FsmSftDiv::work} \
 	-file {./g4brd.io.pdc} \
 	-file {./g4led.io.pdc}
 
-organize_tool_files -tool {COMPILE} -input_type {constraint} -module {IniPatGen::work} \
+organize_tool_files -tool {COMPILE} -input_type {constraint} -module {FsmPatGen::work} \
 	-file {./g4brd.io.pdc} \
 	-file {./g4led.io.pdc}
 

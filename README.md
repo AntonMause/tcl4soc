@@ -103,10 +103,10 @@ brdLexSwx :  Control signal polarity for each Board/Kit supported.
 -mySerRxd : small UART receiver fixed clock and baud rate
 (May use bare metal rxd/txd units for debug sessions)
 
-1. IniSftDiv : Shift register based clock divider with No/aSync/Sync Reset.
+1. FsmSftDiv : Shift register based clock divider with No/aSync/Sync Reset.
 (Can be used to understand what is different here from SRAM FPGAs)
 
-1. IniPatGen : Pattern Generators with No/aSync Reset.
+1. FsmPatGen : Pattern Generators with No/aSync Reset.
 
 ## List of supported kits :
 
