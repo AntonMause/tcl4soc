@@ -54,8 +54,8 @@ Each project should contain most of the TopLevel code snippets.
 If your kits script does not support all features yet, check out the 
 code from the reference/template kits create scripts and source.
 
-Each kit comes with its own local brdAbcXyz file to fit and tweak.
-Also check PDC files for signal polarity and additional information.
+Each kit comes with its own local brdAbcXyz files to fit and tweak.
+Also check PDC files for signal hints and additional information.
 
 Signal naming convention i_ input, o_ output, s_ local, g_ global.
 
@@ -75,7 +75,7 @@ See "..._create.tcl" for more details.
 (Toplevel with smallest amount of resources, good to verify your own board)
 
 1. OscChpCnt : Blink LEDs using On chip oscillator.
--myChpOsc : Use internal G4 25/50MHz RC-Osc
+-myChpOsc : Use internal RC-Oscillator (supported in all G4 & some G3)
 (Next OnDie resource involved, go and check how it works)
 
 1. OscChpMux : Blink LEDs using On chip oscillator and ngMUX.
@@ -122,13 +122,15 @@ brdLexSwx :  Control signal polarity for each Board/Kit supported.
 
 1. g4eval (Done/6) M2GL010T, M2S025T, M2S090TS, Evaluation Kit
 
+1. g4img (Test/2) M2S025T IMG Nordhausen Development Kit
+
 1. g4kick (Done/2) M2S010S Avnet Kickstart Kit
 
 1. g4rt (Test/2) RTG4 Development Kit (ES/PROTO)
 
 1. g4start (Test/2) M2S050ES, EmCraft Starter Kit FG896
 
-#### Total of 27 Configurations
+#### Total of 29 Configurations
 
 #### Total of 10 Toplevel projects
 
