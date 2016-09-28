@@ -136,4 +136,26 @@ brdLexSwx :  Control signal polarity for each Board/Kit supported.
 
 B.t.w. : Some SF2 Kits support IGLOO2 emulation.
 
+## List of higlighted features :
+
+1. myRngOsc : Instantiate elements via GENERATE.
+
+1. myDffCnt : Generate something in a loop.
+
+1. brdConst_pkg : Use package for project wide constants.
+
+1. mySerTxd : Forward constant/generic to instantiation.
+
+1. mySerRxD : Calculate vector length from value.
+
+1. FsmPatGen : HowTo initialize (or not) FLASH FPGAs.
+
+1. FsmSftDiv : Fast clock divider using shift register.
+
+1. mySynRst : Sync reset to clock.
+
+1. g3icicle : Use macros for GLOBAL/CLOCK macro instantiation in brdRstClk.
+
+1. g3icicle : Use macros for IO-PAD macro instantiation in brdRstClk.
+
 =======================================================================
