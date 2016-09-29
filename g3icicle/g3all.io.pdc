@@ -1,0 +1,35 @@
+#
+# Microsemi I/O Physical Design Constraints file 
+# (c) 2016 by Anton Mause 
+# 
+# User Locked I/O settings
+# CS132 footprint on Icicle Kit
+#
+# use this for old/mature constraint flow
+# 
+
+# original name : OSC_CLK approx 20 MHz RC variable oscillator
+set_io CLK20MHZ   -pinname  A5   -fixed yes  -DIRECTION INPUT
+
+# original name : PBRESET_N = DS1818 & SW1 = low on power up & reset
+set_io DEVRST_N    -pinname  C1   -fixed yes  -DIRECTION INPUT
+
+# original names : PB1=SWITCH4, PB2=SWITCH5, low if pressed
+set_io PB1        -pinname  C9   -fixed yes  -DIRECTION INPUT
+set_io PB2        -pinname  A13  -fixed yes  -DIRECTION INPUT
+
+# 1-3 real LEDs, 7 outputs are routed somewhere, low=active
+# LED0=GPIO8, LED4=GPIO4, LED5=GPIO5, ...
+set_io LED0       -pinname  A23  -fixed yes  -DIRECTION OUTPUT
+set_io LED1       -pinname  A17  -fixed yes  -DIRECTION OUTPUT
+set_io LED2       -pinname  B16  -fixed yes  -DIRECTION OUTPUT
+set_io LED3       -pinname  A18  -fixed yes  -DIRECTION OUTPUT
+set_io LED4       -pinname  A7   -fixed yes  -DIRECTION OUTPUT
+set_io LED5       -pinname  C6   -fixed yes  -DIRECTION OUTPUT
+set_io LED6       -pinname  A11  -fixed yes  -DIRECTION OUTPUT
+set_io LED7       -pinname  B10  -fixed yes  -DIRECTION OUTPUT
+
+# USB uart original label : AGL_UART_?XD
+set_io UART_RXD   -pinname  C31  -fixed yes  -DIRECTION INPUT
+set_io UART_TXD   -pinname  B34  -fixed yes  -DIRECTION OUTPUT
+

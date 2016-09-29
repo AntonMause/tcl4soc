@@ -1,0 +1,33 @@
+#
+# Microsemi I/O Physical Design Constraints file 
+# (c) 2016 by Anton Mause 
+# 
+# User Locked I/O settings
+# TQ144 footprint on Avnet Kickstart Kit
+#
+# use this for old/mature constraint flow
+
+# original name : ?CLK? at 50 MHz XTAL oscillator
+set_io OSC_CLK   -pinname   44   -fixed yes  -DIRECTION INPUT
+
+# original name : ?RESET?
+# set_io RESET_N    -pinname  ???  -fixed yes  -DIRECTION INPUT
+
+# original names : PB1?, PB2=?, ?? if pressed
+set_io PB1        -pinname  143  -fixed yes  -DIRECTION INPUT
+set_io PB2        -pinname  144  -fixed yes  -DIRECTION INPUT
+
+# 4 real duoLEDs, red/grn , high=active
+# LED0=GPIO8, LED4=GPIO4, LED5=GPIO5, ...
+set_io LED0       -pinname  130  -fixed yes  -DIRECTION OUTPUT
+set_io LED1       -pinname  129  -fixed yes  -DIRECTION OUTPUT
+set_io LED2       -pinname  134  -fixed yes  -DIRECTION OUTPUT
+set_io LED3       -pinname  131  -fixed yes  -DIRECTION OUTPUT
+set_io LED4       -pinname  141  -fixed yes  -DIRECTION OUTPUT
+set_io LED5       -pinname  137  -fixed yes  -DIRECTION OUTPUT
+set_io LED6       -pinname  136  -fixed yes  -DIRECTION OUTPUT
+set_io LED7       -pinname  135  -fixed yes  -DIRECTION OUTPUT
+
+# USB uart original label : AGL_UART_?XD
+set_io UART_RXD   -pinname    1  -fixed yes  -DIRECTION INPUT
+set_io UART_TXD   -pinname    2  -fixed yes  -DIRECTION OUTPUT
