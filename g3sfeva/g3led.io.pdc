@@ -1,0 +1,22 @@
+#
+# Microsemi I/O Physical Design Constraints file 
+# (c) 2016 by Anton Mause 
+# 
+# User Locked I/O settings
+# FG484 footprint on A2F Eval Kit
+# 
+
+# original name D1 to D8, labled LED0 to LED7
+set_io LED0       -pinname  B19  -fixed yes  -DIRECTION OUTPUT
+set_io LED1       -pinname  B20  -fixed yes  -DIRECTION OUTPUT
+set_io LED2       -pinname  C19  -fixed yes  -DIRECTION OUTPUT
+set_io LED3       -pinname  H17  -fixed yes  -DIRECTION OUTPUT
+set_io LED4       -pinname  H20  -fixed yes  -DIRECTION OUTPUT
+set_io LED5       -pinname  C21  -fixed yes  -DIRECTION OUTPUT
+set_io LED6       -pinname  D21  -fixed yes  -DIRECTION OUTPUT
+set_io LED7       -pinname  G21  -fixed yes  -DIRECTION OUTPUT
+#
+# D5, LED5 via JP11
+# D6, LED5 via JP12
+# D7, LED5 via JP13
+# D8, LED5 via JP14
