@@ -20,6 +20,7 @@ package body brdConst_pkg is
   -- Frequency of signal o_clk from brdRstClk to system
   constant BRD_OSC_CLK_MHZ : positive := 48_000_000; -- direct
 --constant BRD_OSC_CLK_MHZ : positive := 24_000_000; -- divided
+--constant BRD_OSC_CLK_MHZ : positive := 10_000_000; -- divided
 end brdConst_pkg;
 
 ----------------------------------------------------------------------
