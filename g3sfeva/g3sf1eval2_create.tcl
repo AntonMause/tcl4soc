@@ -80,11 +80,11 @@ save_project
 # close_project -save 1 
 
 # save/make copy of project changing from "linked files" to "imported files"
-save_project_as -location $PATH_IMPORTED -name {g3icicle_src} -replace_links 1 -files {all} -designer_views {all} 
+save_project_as -location $PATH_IMPORTED -name {g3sf1eval2_src} -replace_links 1 -files {all} -designer_views {all} 
 save_project 
 
 # copy project to ZIP archive
-project_archive -location $PATH_LINKED -name {g3icicle_src} -replace_links 1 -files {all} -designer_views {all} 
+project_archive -location $PATH_LINKED -name {g3sf1eval2_src} -replace_links 1 -files {all} -designer_views {all} 
 save_project 
 
 # show current/process working directory
