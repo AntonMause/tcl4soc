@@ -22,9 +22,15 @@ The g4eval folder for the Microsemi Eval kit is intended as ref/template.
 Each kit folder contains all special files to create the project from scratch.
 Start Libero SoC and open Menu -> Project -> Exec Script -> Select tcl script.
 
-Naming convention for script : g4-NameOfKit-DieSize-s/g(M2S/M2GL)_create.tcl .
+Naming convention for g3 script : g3-Family-NameOfKit-DieSize_create.tcl .
+For example g3fsemb15_create.tcl -> Fusion, Embeded Kit M1AFS1500.
+(gl=Igloo, pa=ProAsic3, fs=Fusion, sf=SmartFusion, for most kits)
+
+Naming convention for g4 script : g4-NameOfKit-DieSize-s/g(M2S/M2GL)_create.tcl .
 For example g4kick1s_create.tcl -> Kickstart M2S010S in SmartFusion2 mode.
 The RT4G/RTG4 naming is g4rt15es (engineering sample) and g4rt15pr (proto).
+
+To compare resources divide G3 number by 100 to get G4 scaling (very coarse).
 
 PDC files follow the g4-FunctionalGroup.io.pdc rule.
 The minimun feature set requires 8 LED output names in "g4led.io.pdc" .
@@ -110,6 +116,8 @@ brdLexSwx :  Control signal polarity for each Board/Kit supported.
 
 ## List of supported kits :
 
+1. g3fsemb (Test/1) Fusion Embedded Kit (M1AFS1500)
+
 1. g3icicle (Done/1) AGL125V2 Icicle Kit
 
 1. g3sfeva (Test/1) A2F200 Evaluation Kit
@@ -132,7 +140,7 @@ brdLexSwx :  Control signal polarity for each Board/Kit supported.
 
 1. g4start (Test/2) M2S050ES, EmCraft Starter Kit FG896
 
-#### Total of 30 Configurations
+#### Total of 31 Configurations
 
 #### Total of 10 Toplevel projects
 
