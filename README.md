@@ -8,7 +8,7 @@
 This is a pool of sources and scripts to demonstrate basic use of Libero SoC 
 toolsuite and devices of the generation G3(130nm) & G4(65nm) product families.
 
-#### G3 = ProASIC3/IGLOO(1)/Fusion/SmartFusion(1)/RT3PE
+#### G3 := ProASIC3/IGLOO(1)/Fusion/SmartFusion(1)/RT3PE
 #### G4 := SmartFusion2/IGLOO2/RTG4
 
 The current snapshot is intended to use Libero SoC version 11.7 (2016q2)
@@ -116,7 +116,7 @@ brdLexSwx :  Control signal polarity for each Board/Kit supported.
 
 ## List of supported kits :
 
-1. g3fsemb (Test/1) Fusion Embedded Kit (M1AFS1500)
+1. g3afs (Test/1) Fusion Kits (Emb=M1AFS1500)
 
 1. g3icicle (Done/1) AGL125V2 Icicle Kit
 
@@ -167,5 +167,7 @@ B.t.w. : Some SF2 Kits support IGLOO2 emulation.
 1. g3icicle : Use macros for GLOBAL/CLOCK macro instantiation in brdRstClk.
 
 1. g3icicle : Use macros for IO-PAD macro instantiation in brdRstClk.
+
+1. g4eval : ./stimulus/*_tb testbenches
 
 =======================================================================
