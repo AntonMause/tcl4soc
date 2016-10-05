@@ -1,0 +1,21 @@
+#
+# Microsemi I/O Physical Design Constraints file 
+# (c) 2016 by Anton Mause 
+# 
+# User Locked I/O settings
+# PQ208 for A3PE/A3P Eval Brd
+#
+
+# original name : OSC_CLK 40 MHz
+set_io OSC_CLK   -pinname     -fixed yes  -DIRECTION INPUT
+
+# original name : PBRESET_N = DS1818 & SW1 = low on power up & reset
+set_io DEVRST_N   -pinname     -fixed yes  -DIRECTION INPUT
+
+# original names : PB1=SWITCH4, PB2=SWITCH5, low if pressed
+set_io PB1        -pinname     -fixed yes  -DIRECTION INPUT
+set_io PB2        -pinname    -fixed yes  -DIRECTION INPUT
+
+# uart original label : _UART_?XD
+set_io UART_RXD   -pinname    -fixed yes  -DIRECTION INPUT
+set_io UART_TXD   -pinname    -fixed yes  -DIRECTION OUTPUT

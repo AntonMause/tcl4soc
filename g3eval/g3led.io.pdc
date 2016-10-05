@@ -1,0 +1,18 @@
+#
+# Microsemi I/O Physical Design Constraints file 
+# (c) 2016 by Anton Mause 
+# 
+# User Locked I/O settings
+# PQ208 for A3PE/A3P Eval Brd
+# 
+
+# 1-8 real LEDs,
+# LED0=D1, LED1=D2, ...
+set_io LED0       -pinname  63  -fixed yes  -DIRECTION OUTPUT
+set_io LED1       -pinname  61  -fixed yes  -DIRECTION OUTPUT
+set_io LED2       -pinname  60  -fixed yes  -DIRECTION OUTPUT
+set_io LED3       -pinname  59  -fixed yes  -DIRECTION OUTPUT
+set_io LED4       -pinname  58  -fixed yes  -DIRECTION OUTPUT
+set_io LED5       -pinname  57  -fixed yes  -DIRECTION OUTPUT
+set_io LED6       -pinname  56  -fixed yes  -DIRECTION OUTPUT
+set_io LED7       -pinname  55  -fixed yes  -DIRECTION OUTPUT

@@ -72,7 +72,7 @@ begin
       s_two <= not s_two(0) & s_two(23 downto 1);
     end if;
   end process;
-  o_clk <= s_one(0) AND s_two(0); -- aprox 10MHz, direct
+  o_clk <= s_one(0) AND s_two(0); -- aprox 10MHz, stumbling
 
 -- edit BRD_OSC_CLK_MHZ in brdConst_pkg too
 --o_clk   <= i_clk; -- 48MHz, direct

@@ -1,6 +1,6 @@
 
 ----------------------------------------------------------------------
--- brdRstClk (for some Fusion (Embeded/Start/SCS) Dev Kit )
+-- brdRstClk (A3PE/A3P PQ208 Eval Board)
 ----------------------------------------------------------------------
 -- (c) 2016 by Anton Mause
 --
@@ -13,8 +13,9 @@
 library ieee;
 use ieee.std_logic_1164.all;
 
-library fusion;
-use fusion.all;
+-- todo include correct library
+-- library smartfusion2;
+-- use smartfusion2.all;
 
 ----------------------------------------------------------------------
 entity brdRstClk is
@@ -45,8 +46,8 @@ begin
   end process;
 
 -- edit BRD_OSC_CLK_MHZ in brdConst_pkg too
-  o_clk   <= i_clk; -- direct
---o_clk   <= s_tgl; -- divided
+  o_clk   <= i_clk; -- 40MHz, direct
+--o_clk   <= s_tgl; -- 20MHz, divided
 
 end rtl;
 ----------------------------------------------------------------------

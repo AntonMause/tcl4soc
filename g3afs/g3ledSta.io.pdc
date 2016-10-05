@@ -1,0 +1,21 @@
+#
+# Microsemi I/O Physical Design Constraints file 
+# (c) 2016 by Anton Mause 
+# 
+# User Locked I/O settings
+# FG484 footprint on Fusion Starter Kit 
+#
+
+# original name D1 to D4, labled LED1_N to LED4_N active LOW
+set_io LED0       -pinname  D8   -fixed yes
+set_io LED1       -pinname  D9   -fixed yes
+set_io LED2       -pinname  D10  -fixed yes
+set_io LED3       -pinname  D6   -fixed yes
+#
+# use GPIO4 to GPIO7 to map LED4 to LED7
+set_io LED4       -pinname  T19  -fixed yes
+set_io LED5       -pinname  R2   -fixed yes
+set_io LED6       -pinname  P3   -fixed yes
+set_io LED7       -pinname  P2   -fixed yes
+#
+

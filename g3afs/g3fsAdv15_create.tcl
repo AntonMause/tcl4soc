@@ -2,15 +2,15 @@
 # Microsemi Tcl Script for libero SoC
 # (c) 2016 by Anton Mause 
 #
-# (for Fusion Embeded Dev Kit )
+# (for Fusion Advanced Dev Kit )
 #
 # untested
 #
 
 # 
 set PATH_SOURCES   .
-set PATH_LINKED    ../../11p7/g3fsEmb15_lnk
-set PATH_IMPORTED  ../../11p7/g3fsEmb15_src
+set PATH_LINKED    ../../11p7/g3fsAdv15_lnk
+set PATH_IMPORTED  ../../11p7/g3fsAdv15_src
 
 # where are we
 puts -nonewline "Sources Path  : "
@@ -26,7 +26,7 @@ puts -nonewline "Current Path  : "
 puts [pwd]
 
 # create new project
-new_project -location $PATH_LINKED -name {g3fsEmb15_lnk} -project_description {G3 Fusion Embedded Kit} \
+new_project -location $PATH_LINKED -name {g3fsAdv15_lnk} -project_description {G3 Fusion Advanced Dev Kit} \
 	-block_mode 0 -standalone_peripheral_initialization 0 -use_enhanced_constraint_flow 1 -hdl {VHDL} \
 	-family {Fusion} -die {M1AFS1500} -package {484 FBGA} -speed {STD} -die_voltage {1.5} \
 	-part_range {COM} -adv_options {IO_DEFT_STD:LVCMOS 3.3V} -adv_options {RESTRICTPROBEPINS:1} \
@@ -37,9 +37,9 @@ new_project -location $PATH_LINKED -name {g3fsEmb15_lnk} -project_description {G
 # initialy link to source files, HDL and constraints
 create_links \
          -convert_EDN_to_HDL 0 \
-         -hdl_source {./brdLexSwxEmb.vhd} \
+         -hdl_source {./brdLexSwxAdv.vhd} \
          -hdl_source {./brdRstClk.vhd} \
-         -hdl_source {./brdConstEmb_pkg.vhd} \
+         -hdl_source {./brdConstAdv_pkg.vhd} \
          -hdl_source {./myChpOsc3.vhd} \
          -hdl_source {../vhdl/myDff.vhd} \
          -hdl_source {../vhdl/myDffCnt.vhd} \
@@ -54,42 +54,42 @@ create_links \
 #
 create_links \
          -convert_EDN_to_HDL 0 \
-         -pdc {./g3brdEmb.io.pdc} \
-         -pdc {./g3ledEmb.io.pdc}
+         -pdc {./g3ledAdv.io.pdc}
+#         -pdc {./g3brdAdv.io.pdc} \
 		 
 set_root -module {OscRngCnt::work} 
 organize_tool_files -tool {COMPILE} -input_type {constraint} -module {OscRngCnt::work} \
-	-file {./g3ledEmb.io.pdc}
+	-file {./g3ledAdv.io.pdc}
 
 set_root -module {OscChpCnt::work} 
 organize_tool_files -tool {COMPILE} -input_type {constraint} -module {OscChpCnt::work} \
-	-file {./g3ledEmb.io.pdc}
+	-file {./g3ledAdv.io.pdc}
 
-set_root -module {OscXtlCnt::work} 
-organize_tool_files -tool {COMPILE} -input_type {constraint} -module {OscXtlCnt::work} \
-	-file {./g3brdEmb.io.pdc} \
-	-file {./g3ledEmb.io.pdc}
+#set_root -module {OscXtlCnt::work} 
+#organize_tool_files -tool {COMPILE} -input_type {constraint} -module {OscXtlCnt::work} \
+#	-file {./g3brdAdv.io.pdc} \
+#	-file {./g3ledAdv.io.pdc}
 
-set_root -module {OscXtlSer::work} 
-organize_tool_files -tool {COMPILE} -input_type {constraint} -module {OscXtlSer::work} \
-	-file {./g3brdEmb.io.pdc} \
-	-file {./g3ledEmb.io.pdc}
+#set_root -module {OscXtlSer::work} 
+#organize_tool_files -tool {COMPILE} -input_type {constraint} -module {OscXtlSer::work} \
+#	-file {./g3brdAdv.io.pdc} \
+#	-file {./g3ledAdv.io.pdc}
 
-set_root -module {OscXtlTxd::work} 
-organize_tool_files -tool {COMPILE} -input_type {constraint} -module {OscXtlTxd::work} \
-	-file {./g3brdEmb.io.pdc} \
-	-file {./g3ledEmb.io.pdc}
+#set_root -module {OscXtlTxd::work} 
+#organize_tool_files -tool {COMPILE} -input_type {constraint} -module {OscXtlTxd::work} \
+#	-file {./g3brdAdv.io.pdc} \
+#	-file {./g3ledAdv.io.pdc}
 
 set_root -module {OscRngCnt::work} 
 save_project 
 # close_project -save 1 
 
 # save/make copy of project changing from "linked files" to "imported files"
-save_project_as -location $PATH_IMPORTED -name {g3fsEmb15_src} -replace_links 1 -files {all} -designer_views {all} 
+save_project_as -location $PATH_IMPORTED -name {g3fsAdv15_src} -replace_links 1 -files {all} -designer_views {all} 
 save_project 
 
 # copy project to ZIP archive
-project_archive -location $PATH_LINKED -name {g3fsEmb15_src} -replace_links 1 -files {all} -designer_views {all} 
+project_archive -location $PATH_LINKED -name {g3fsAdv15_src} -replace_links 1 -files {all} -designer_views {all} 
 save_project 
 
 # show current/process working directory

@@ -116,7 +116,9 @@ brdLexSwx :  Control signal polarity for each Board/Kit supported.
 
 ## List of supported kits :
 
-1. g3afs (Test/1) Fusion Kits (Emb=M1AFS1500)
+1. g3afs (Test/4) Fusion Kits (M1/AFS1500/AFS600)
+
+1. g3eval (Test/1) ProASIC3 Eval Kit (LCD/OLED)
 
 1. g3icicle (Done/1) AGL125V2 Icicle Kit
 
@@ -140,7 +142,7 @@ brdLexSwx :  Control signal polarity for each Board/Kit supported.
 
 1. g4start (Test/2) M2S050ES, EmCraft Starter Kit FG896
 
-#### Total of 31 Configurations
+#### Total of 35 Configurations
 
 #### Total of 10 Toplevel projects
 

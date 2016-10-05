@@ -75,6 +75,10 @@ create_links \
          -convert_EDN_to_HDL 0 \
          -io_pdc {./g4brd.io.pdc} \
          -io_pdc {./g4led.io.pdc}
+#
+create_links \
+         -convert_EDN_to_HDL 0 \
+         -stimulus {../stimulus/mySerTxd_tb.vhd} 
 
 set_root -module {OscRngCnt::work} 
 
@@ -113,6 +117,12 @@ organize_tool_files -tool {COMPILE} -input_type {constraint} -module {FsmPatGen:
 	-file {./g4brd.io.pdc} \
 	-file {./g4led.io.pdc}
 
+set_root -module {mySerTxd::work} 
+organize_tool_files -tool {SIM_PRESYNTH} -file {../stimulus/mySerTxd_tb.vhd} -module {mySerTxd::work} -input_type {stimulus} 
+organize_tool_files -tool {SIM_POSTSYNTH} -file {../stimulus/mySerTxd_tb.vhd} -module {mySerTxd::work} -input_type {stimulus} 
+organize_tool_files -tool {SIM_POSTLAYOUT} -file {../stimulus/mySerTxd_tb.vhd} -module {mySerTxd::work} -input_type {stimulus} 
+
+set_root -module {OscRngCnt::work} 
 save_project 
 # close_project -save 1 
 
