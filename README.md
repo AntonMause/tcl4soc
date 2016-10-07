@@ -124,7 +124,7 @@ brdLexSwx :  Control signal polarity for each Board/Kit supported.
 
 1. g3sfeva (Test/1) A2F200 Evaluation Kit
 
-1. g3scs (Test/5) ProAsic3/Igloo(1)/... M1/M7/... SCS/Dev Kits
+1. g3scs (Test/7) ProAsic3/Igloo(1)/... M1/M7/... SCS/Dev Kits
 
 1. g4adv (Test/2) M2S150TS Advanced Development Board
 
@@ -142,7 +142,7 @@ brdLexSwx :  Control signal polarity for each Board/Kit supported.
 
 1. g4start (Test/2) M2S050ES, EmCraft Starter Kit FG896
 
-#### Total of 35 Configurations
+#### Total of 37 Configurations
 
 #### Total of 10 Toplevel projects
 

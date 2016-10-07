@@ -30,3 +30,7 @@ MP7 = ARM CoreMP7 softcore licence included
 For fusion SCS kit look in ../g3afs folder.
 
 B.t.w. Documentation mixes SCS and Starter kit.
+
+Looks like there are two layouts.
+M7kit with M7 and M1 equipped
+M1kit with M1
