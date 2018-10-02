@@ -11,7 +11,7 @@ toolsuite and devices of the generation G3(130nm) & G4(65nm) product families.
 #### G3 := ProASIC3/IGLOO(1)/Fusion/SmartFusion(1)/RT3PE
 #### G4 := SmartFusion2/IGLOO2/RTG4
 
-The current snapshot is intended to use Libero SoC version 11.7 (2016q2)
+The current snapshot is intended to use Libero SoC version 11.9 (2018q4)
 
 Unpack ./tcl4soc-RevXYZ.zip to your projects directory and name ./tcl4soc/ .
 Most generic HDL sources can be found in the "./vhdl/" folder.
