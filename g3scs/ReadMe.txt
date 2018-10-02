@@ -9,6 +9,8 @@ Device : L6 AGL600V2-FGG256
 
 ToDo : add and test kits
 
+FixMe : Libero fails to convert links to files when saving-as
+
 
 List of SCS/Starter Kits as listed in document :
 NAME : DEV_KIT_SCS_QS.PDF

@@ -9,8 +9,8 @@
 
 # 
 set PATH_SOURCES   .
-set PATH_LINKED    ../../11p7/g3scsG1_lnk
-set PATH_IMPORTED  ../../11p7/g3scsG1_src
+set PATH_LINKED    ../../11p9/g3scsG1_lnk
+set PATH_IMPORTED  ../../11p9/g3scsG1_src
 
 # where are we
 puts -nonewline "Sources Path  : "

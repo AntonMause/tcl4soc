@@ -9,8 +9,8 @@
 
 # 
 set PATH_SOURCES   .
-set PATH_LINKED    ../../11p7/g3scsM6_lnk
-set PATH_IMPORTED  ../../11p7/g3scsM6_src
+set PATH_LINKED    ../../11p9/g3scsM6_lnk
+set PATH_IMPORTED  ../../11p9/g3scsM6_src
 
 # where are we
 puts -nonewline "Sources Path  : "
@@ -58,22 +58,22 @@ create_links \
 
 set_root -module {OscRngCnt::work} 
 organize_tool_files -tool {COMPILE} -input_type {constraint} -module {OscRngCnt::work} \
-	-file {./g3led484.io.pdc}
+	-file {./g3led256.io.pdc}
 
 set_root -module {OscXtlCnt::work} 
 organize_tool_files -tool {COMPILE} -input_type {constraint} -module {OscXtlCnt::work} \
-	-file {./g3brd484.io.pdc} \
-	-file {./g3led484.io.pdc}
+	-file {./g3brd256.io.pdc} \
+	-file {./g3led256.io.pdc}
 
 set_root -module {OscXtlSer::work} 
 organize_tool_files -tool {COMPILE} -input_type {constraint} -module {OscXtlSer::work} \
-	-file {./g3brd484.io.pdc} \
-	-file {./g3led484.io.pdc}
+	-file {./g3brd256.io.pdc} \
+	-file {./g3led256.io.pdc}
 
 set_root -module {OscXtlTxd::work} 
 organize_tool_files -tool {COMPILE} -input_type {constraint} -module {OscXtlTxd::work} \
-	-file {./g3brd484.io.pdc} \
-	-file {./g3led484.io.pdc}
+	-file {./g3brd256.io.pdc} \
+	-file {./g3led256.io.pdc}
 
 set_root -module {OscRngCnt::work} 
 save_project 
