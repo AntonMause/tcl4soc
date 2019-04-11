@@ -142,7 +142,9 @@ brdLexSwx :  Control signal polarity for each Board/Kit supported.
 
 1. g4start (Test/2) M2S050ES, EmCraft Starter Kit FG896
 
-#### Total of 37 Configurations
+1. g4tem (Test/2) M2S010, Trenz SMF2000 Kit
+
+#### Total of 39 Configurations
 
 #### Total of 10 Toplevel projects
 
