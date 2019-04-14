@@ -1,7 +1,7 @@
 
 # tcl4soc
 
- 2016 by Anton Mause
+ 2016 - 2019 by Anton Mause
 
 ##TCL / VHDL Playground for Microsemi Libero SOC
 
@@ -138,13 +138,15 @@ brdLexSwx :  Control signal polarity for each Board/Kit supported.
 
 1. g4kick (Done/2) M2S010S Avnet Kickstart Kit
 
+1. g4maker (Done/2) M2S010 DigiKey Maker Board
+
 1. g4rt (Test/2) RTG4 Development Kit (ES/PROTO)
 
 1. g4start (Test/2) M2S050ES, EmCraft Starter Kit FG896
 
 1. g4tem (Test/2) M2S010, Trenz SMF2000 Kit
 
-#### Total of 39 Configurations
+#### Total of 41 Configurations
 
 #### Total of 10 Toplevel projects
 

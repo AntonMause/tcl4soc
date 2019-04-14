@@ -1,0 +1,16 @@
+Bus v_cnt[1:0] display_format hex
+v_cnt[1]:v_cnt[1]:Q
+v_cnt[0]:v_cnt[0]:Q
+Bus end
+Bus v_sft[4:1] display_format hex
+v_sft[4]:v_sft[4]:Q
+v_sft[3]:v_sft[3]:Q
+v_sft[2]:v_sft[2]:Q
+v_sft[1]:v_sft[1]:Q
+Bus end
+Bus v_sft_1[4:1] display_format hex
+v_sft_1[4]:v_sft_1[4]:Q
+v_sft_1[3]:v_sft_1[3]:Q
+v_sft_1[2]:v_sft_1[2]:Q
+v_sft_1[1]:v_sft_1[1]:Q
+Bus end
