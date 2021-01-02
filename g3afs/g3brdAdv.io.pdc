@@ -1,0 +1,35 @@
+#
+# Microsemi I/O Physical Design Constraints file 
+# (c) 2016 by Anton Mause 
+# 
+# User Locked I/O settings
+# (for Fusion Advanced Dev Kit )
+#
+
+# original name : CLK_50MHZ approx 50 MHz RC oscillator
+set_io OSC_CLK    -pinname  J16  -fixed yes  -DIRECTION INPUT
+
+# original name : RESET_N = DS1818 & SW1 = low on power up & reset
+set_io DEVRST_N    -pinname  H19  -fixed yes  -DIRECTION INPUT
+
+
+# original names : PB1=SW2=SWITCH2, PB2=SW3=SWITCH3, low if pressed
+set_io PB1        -pinname  P18  -fixed yes  -DIRECTION INPUT
+set_io PB2        -pinname  R18  -fixed yes  -DIRECTION INPUT
+
+# USB uart original label : _?XD, sorry fixed function
+set_io UART_RXD   -pinname  Y1   -fixed yes  -DIRECTION INPUT
+set_io UART_TXD   -pinname  W5   -fixed yes  -DIRECTION OUTPUT
+
+# SW4 = PUB = RTC_SW
+#
+# Y1 = F254 = CLK_32
+# Y3 = XTAL = 32KHz
+#
+# DIG_?->4k7->22nF->100k->PWM?->J10 MixedConn40
+# DIG_1=L18 -> PWM1=37=TP6 -> AV4=T10
+# DIG_2=L16 -> PWM2=38
+#
+# J14 1=SDA1, 2=SCL1  3=GND
+# J15 1=SDA2, 2=SCL2, 3=GND
+#

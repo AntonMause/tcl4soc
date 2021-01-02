@@ -6,16 +6,14 @@
 # FG484 footprint on Fusion Advanced Dev Kit 
 #
 
-# ??? original name D1 to D4, labled LED1_N to LED4_N active LOW
-set_io LED0       -pinname     -fixed yes
-set_io LED1       -pinname     -fixed yes
-set_io LED2       -pinname    -fixed yes
-set_io LED3       -pinname     -fixed yes
-#
-# ??? use GPIO4 to GPIO7 to map LED4 to LED7
-set_io LED4       -pinname    -fixed yes
-set_io LED5       -pinname     -fixed yes
-set_io LED6       -pinname     -fixed yes
-set_io LED7       -pinname     -fixed yes
+# original name D1 to D7, labled LED1_N to LED8_N active LOW
+set_io LED0       -pinname  J2   -fixed yes
+set_io LED1       -pinname  J3   -fixed yes
+set_io LED2       -pinname  J4   -fixed yes
+set_io LED3       -pinname  M7   -fixed yes
+set_io LED4       -pinname  K4   -fixed yes
+set_io LED5       -pinname  L5   -fixed yes
+set_io LED6       -pinname  L7   -fixed yes
+set_io LED7       -pinname  M5   -fixed yes
 #
 
